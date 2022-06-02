@@ -2,11 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Online Demo Url
+
+[https://xamfam-test.herokuapp.com/](https://xamfam-test.herokuapp.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `yarn start`
+
+Runs the app in the production mode.\
+You should run `yarn build` first before run this command.
+
+### `yarn dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

@@ -1,25 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+import Pages from "./pages/index";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      "Garnett",
+      "'Segoe UI'",
+      "Roboto",
+      "Oxygen",
+      "Ubuntu",
+      "Cantarell",
+      "'Fira Sans'",
+      "'Droid Sans'",
+      "'Helvetica Neue'",
+      "'sans - serif'",
+    ].join(","),
+  },
+  palette: {
+    primary: {
+      main: "#022A5E",
+      light: "#F4F7FB",
+    },
+    secondary: {
+      main: "#3B4045",
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <ThemeProvider theme={theme}>
+        <Pages />
+      </ThemeProvider>
+    </Box>
   );
 }
 
